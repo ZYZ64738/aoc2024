@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace AOC2024\Day2;
 final class puzzleB extends Puzzle
 {
-    public function solve(): void
+    public function solve(): int
     {
         $safeLevels = 0;
         foreach ($this->getInputCsv() as $input) {
@@ -12,7 +12,7 @@ final class puzzleB extends Puzzle
                 $safeLevels++;
             }
         }
-        echo $safeLevels;
+        return $safeLevels;
     }
 
     protected

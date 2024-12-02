@@ -7,7 +7,7 @@ final class puzzleA extends Puzzle
 {
     public const MAX_DEVIATION = 3;
 
-    public function solve(): void
+    public function solve(): int
     {
         $safeLevels = 0;
         foreach ($this->getInputCsv() as $input) {
@@ -15,7 +15,7 @@ final class puzzleA extends Puzzle
                 $safeLevels++;
             }
         }
-        echo $safeLevels;
+        return $safeLevels;
     }
 
     protected

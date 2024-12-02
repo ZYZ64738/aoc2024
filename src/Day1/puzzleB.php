@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace AOC2024\Day1;
 final class puzzleB extends Puzzle
 {
-    public function solve(): void
+    public function solve(): int
     {
         $array = $this->getInputCsv();
         $res = 0;
@@ -15,6 +15,6 @@ final class puzzleB extends Puzzle
             }
             $res += $val * $counts[$val];
         }
-        echo $res;
+        return $res;
     }
 }

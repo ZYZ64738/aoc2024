@@ -10,5 +10,5 @@ interface IBase
 
     public function getInputCsv(): array;
 
-    public function solve(): void;
+    public function solve(): int;
 }
