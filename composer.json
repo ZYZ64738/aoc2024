@@ -1,0 +1,19 @@
+{
+  "name": "sysreset/aoc2024",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "wynands",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "AOC2024\\": "src/"
+    }
+  }
+}
