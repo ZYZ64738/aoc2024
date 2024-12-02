@@ -4,7 +4,7 @@ namespace AOC2024;
 abstract class Base implements IBase
 {
 
-    protected const INPUT_FILE_PATH = '"/Day%s/input"';
+    protected const INPUT_FILE_PATH = '/Day%s/input';
 
     protected int $day;
     protected string $input;
