@@ -14,4 +14,5 @@ final class puzzleA extends Puzzle
         }
         echo $res;
     }
+
 }

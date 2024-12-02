@@ -7,11 +7,16 @@ use AOC2024\Base;
 
 abstract class Puzzle extends Base
 {
-    public function getInputCsv($separator = ' '): array
+    protected int $day = 2;
+
+    public function getInputCsv(): array
     {
-        $input = str_getcsv($this->getInput(), chr(10));
+        $input = explode(chr(10), $this->getInput());
         foreach ($input as &$row) {
-            $row = str_getcsv($row, $separator);
+            $row = explode(' ', $row);
+            foreach ($row as &$item) {
+                $item = (int)$item;
+            }
         }
         return $input;
     }

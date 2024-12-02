@@ -3,8 +3,12 @@
 namespace AOC2024;
 abstract class Base implements IBase
 {
-    public const INPUT_FILE_NAME = 'input';
+
+    protected const INPUT_FILE_NAME = 'input';
+
+    protected int $day;
     protected string $input;
+
 
     public function getInput(): string
     {
@@ -16,9 +20,10 @@ abstract class Base implements IBase
         $this->input = $input;
     }
 
-    public function __construct(int $day)
+    public function __construct()
     {
-        $puzzleDirFile = __DIR__ . "/Day" . $day . "/input";
+
+        $puzzleDirFile = __DIR__ . "/Day" . $this->day . "/input";
         if (!file_exists($puzzleDirFile)) {
             throw new \Exception($puzzleDirFile . " does not exist");
         }

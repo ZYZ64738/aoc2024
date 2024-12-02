@@ -7,6 +7,8 @@ use AOC2024\Base;
 
 abstract class Puzzle extends Base
 {
+    protected int $day = 0;
+
     public function getInputCsv($separator = ' '): array
     {
         $input = [];

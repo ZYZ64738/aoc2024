@@ -9,8 +9,11 @@ final class puzzleB extends Puzzle
         $array = $this->getInputCsv();
         $res = 0;
         $counts = array_count_values($array[1]);
-        foreach ($array[0] as $val1) {
-            $res += $val1 * (int)$counts[(int)$val1];
+        foreach ($array[0] as $val) {
+            if (!isset($counts[$val])) {
+                continue;
+            }
+            $res += $val * $counts[$val];
         }
         echo $res;
     }
