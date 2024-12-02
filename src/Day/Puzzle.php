@@ -9,7 +9,7 @@ abstract class Puzzle extends Base
 {
     protected int $day = 0;
 
-    public function getInputCsv($separator = ' '): array
+    public function getInputCsv(): array
     {
         $input = [];
         return $input;

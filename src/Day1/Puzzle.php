@@ -11,7 +11,7 @@ abstract class Puzzle extends Base
 
     public function getInputCsv($separator = ' '): array
     {
-        $input = str_getcsv($this->getInput(), chr(10));
+        $input = explode(chr(10), $this->getInput());
         $array = [];
         foreach ($input as &$row) {
             $row = explode('   ', $row);

@@ -4,7 +4,7 @@ namespace AOC2024;
 abstract class Base implements IBase
 {
 
-    protected const INPUT_FILE_NAME = 'input';
+    protected const INPUT_FILE_PATH = '"/Day%s/input"';
 
     protected int $day;
     protected string $input;
@@ -22,12 +22,11 @@ abstract class Base implements IBase
 
     public function __construct()
     {
-
-        $puzzleDirFile = __DIR__ . "/Day" . $this->day . "/input";
+        $puzzleDirFile = __DIR__ . sprintf(self::INPUT_FILE_PATH, $this->day);
         if (!file_exists($puzzleDirFile)) {
             throw new \Exception($puzzleDirFile . " does not exist");
         }
-        $input = file_get_contents($puzzleDirFile);
+        $input = trim(file_get_contents($puzzleDirFile));
         $this->setInput($input);
     }
 }

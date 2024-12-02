@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace AOC2024\Day2;
 
-final class puzzleA extends Puzzle
+final class PuzzleA extends Puzzle
 {
     public const MAX_DEVIATION = 3;
 

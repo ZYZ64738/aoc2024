@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace AOC2024\Day1;
-final class puzzleB extends Puzzle
+final class PuzzleB extends Puzzle
 {
     public function solve(): int
     {

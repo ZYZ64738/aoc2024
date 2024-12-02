@@ -12,7 +12,7 @@ for ($day = 1; $day <= 2; $day++) {
     echo (new $puzzleA())->solve();
     echo '<br>Day '.$day.' B solved:' . PHP_EOL;
     echo (new $puzzleB())->solve();
-    echo '<br>';
+    echo '<hr>';
 }
 
 
