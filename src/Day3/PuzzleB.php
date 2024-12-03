@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AOC2024\Day;
+namespace AOC2024\Day3;
 final class PuzzleB extends Puzzle
 {
     public function solve(): int

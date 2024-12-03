@@ -15,6 +15,16 @@ abstract class Base implements IBase
         return $this->input;
     }
 
+    /**
+     * Implemnted in derived class
+     * @return array
+     */
+    public function getInputCsv(): array
+    {
+        $input = [];
+        return $input;
+    }
+
     public function setInput(string $input): void
     {
         $this->input = $input;
